@@ -2,6 +2,7 @@ var express = require("express");
 var path = require('path');
 var nodemailer= require("nodemailer");
 var Parser= require('body-parser');
+const PORT= process.env.PORT || 5000;
 
 var app = express();
 
@@ -16,7 +17,7 @@ app.get('/', function(req,res){
 });
 
 app.post("/send", (req,res)=>{
-    
+
     let transporter = nodemailer.createTransport({
         host:"smtp.gmail.com",
         port:465,
@@ -42,7 +43,7 @@ app.post("/send", (req,res)=>{
     });
 });
 
-app.listen(8080);
+app.listen( PORT,() => console.log('Listenign on ${PORT}')); 
 
 //-------------SENDING INFORMATION NOTIFICATION-----------//
 
