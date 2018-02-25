@@ -16,10 +16,6 @@ app.get('/', function(req,res){
     res.sendFile(__dirname + '/index.html');
 });
 
-app.get("/.well-known/acme-challenge/9YjwgpRVmWSwth8fgt_E7rd2rHKDfOYTKiRluJD_2qE", function(req,res){
-    res.send("9YjwgpRVmWSwth8fgt_E7rd2rHKDfOYTKiRluJD_2qE.fwrpPnNtWuQJccIUqynJfzKZUF_kQdvFNfU3lM7Mz4U");
-});
-
 app.post("/send", (req,res)=>{
 
     let transporter = nodemailer.createTransport({
