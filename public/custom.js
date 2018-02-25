@@ -30,6 +30,8 @@ $("#cspio-form").submit(function(event){
     // Prevent default posting of form - put here to work in case of errors
     event.preventDefault();
 
+    alert("Form submitted, thank you for your interest! ");
+    
     // Abort any pending request
     if (request) {
         request.abort();
