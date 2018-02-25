@@ -31,7 +31,7 @@ $("#cspio-form").submit(function(event){
     event.preventDefault();
 
     alert("Form submitted, thank you for your interest! ");
-    
+
     // Abort any pending request
     if (request) {
         request.abort();
