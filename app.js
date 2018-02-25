@@ -15,6 +15,9 @@ app.use(Parser.json());
 app.get('/', function(req,res){
     res.sendFile(__dirname + '/index.html');
 });
+app.get("/.well-known/acme-challenge/:content", function(req,res){
+    res.send("9YjwgpRVmWSwth8fgt_E7rd2rHKDfOYTKiRluJD_2qE");
+})
 
 app.post("/send", (req,res)=>{
 
